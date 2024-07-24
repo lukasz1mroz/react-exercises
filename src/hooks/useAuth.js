@@ -24,7 +24,7 @@ export const AuthProvider = ({ children }) => {
     const verify2FACode = async (code) => {
         if (code === "0000") {
           setIs2FAVerified(true);
-          navigate("/items"); 
+          navigate("/items/list"); 
           return true;
         }
         return false;

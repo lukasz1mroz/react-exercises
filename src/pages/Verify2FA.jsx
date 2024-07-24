@@ -12,7 +12,7 @@ export const Verify2FA = () => {
     e.preventDefault();
     const isValid = await verify2FACode(code);
     if (isValid) {
-      navigate("/items");
+      navigate("/items/list");
     } else {
       alert("Invalid code. Please try again.");
     }
