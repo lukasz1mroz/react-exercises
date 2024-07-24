@@ -5,6 +5,7 @@ import ProtectedRoute from './routes/ProtectedRoute.jsx';
 import Home from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
 import Items from './pages/Items.jsx';
+import { Verify2FA } from "./pages/Verify2FA.jsx";
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
                 <Routes>
                     <Route path='/' element={<Home/>}/>
                     <Route path='/login' element={<Login/>}/>
+                    <Route path="/verify-2fa" element={<Verify2FA />} />
                     <Route path='/items' element={<ProtectedRoute element={<Items/>}/>}/>
                 </Routes>
             </AuthProvider>
