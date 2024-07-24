@@ -15,7 +15,9 @@ const App = () => {
                     <Route path='/' element={<Home/>}/>
                     <Route path='/login' element={<Login/>}/>
                     <Route path="/verify-2fa" element={<Verify2FA />} />
-                    <Route path='/items' element={<ProtectedRoute element={<Items/>}/>}/>
+                    <Route path='/items' element={<ProtectedRoute/>}>
+                        <Route path='list' element={<Items/>}/>
+                    </Route>
                 </Routes>
             </AuthProvider>
         </BrowserRouter>
